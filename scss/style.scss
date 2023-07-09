@@ -30,12 +30,12 @@ aside {
     align-items: center;
     font-size: 5vw;
     color: #fff;
-    transition: 2s all;
-    position: relative;
+    transition: 2s opacity;
     &.off {
         opacity: 0;
     }
     p {
+        width: 100%;
         position: relative;
         top: -50px;
         text-align: center;

@@ -66,13 +66,13 @@ aside {
   align-items: center;
   font-size: 5vw;
   color: #fff;
-  transition: 2s all;
-  position: relative;
+  transition: 2s opacity;
 }
 aside.off {
   opacity: 0;
 }
 aside p {
+  width: 100%;
   position: relative;
   top: -50px;
   text-align: center;
