@@ -1,5 +1,5 @@
 const num = 200;
-
+const mask = document.querySelector('aside');
 //반환된 이미지를 전역변수에 담음
 const imgDOM = createImgs('figure', num);
 
@@ -10,8 +10,16 @@ imgDOM.forEach((img)=> {
         count++;
         console.log(count)
         if(count === num){
-            console.log('이미지소스 로딩완료')
+            console.log('이미지소스 로딩완료');
+            mask.classList.add('off');
+            setTimeout(()=> {
+                mask.remove();
+            },2000);
         }
+    }
+    //이미지 에러시 대체 이미지 출력
+    img.onerror = (e)=> {
+        e.currentTarget.setAttribute('src','img/logo.png');
     }
 });
 
