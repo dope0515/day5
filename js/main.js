@@ -1,5 +1,6 @@
 const num = 200;
 const mask = document.querySelector('aside');
+const delay = convertSpeed(mask);
 //반환된 이미지를 전역변수에 담음
 const imgDOM = createImgs('figure', num);
 
@@ -17,7 +18,7 @@ imgDOM.forEach((img)=> {
 
             setTimeout(()=> {
                 mask.remove();
-            },2000);
+            },delay);
         }
     }
     //이미지 에러시 대체 이미지 출력
@@ -52,3 +53,7 @@ function matchMove(arrEl,num,e){
 //img요소는 DOM이 생성되어야지 그 이후에 소스를 불러옴
 //img.onload 이벤트를 연결하면 해당 돔에 수반되는 소스 이미지가 완료되었을떄 호출때
 //video.onloadeddate(영상소스 호출 이벤트);
+
+function convertSpeed(el){
+    return parseInt(getComputedStyle(el).transitionDuration) * 100;
+}

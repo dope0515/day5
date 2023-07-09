@@ -30,7 +30,7 @@ aside {
     align-items: center;
     font-size: 5vw;
     color: #fff;
-    transition: 2s opacity;
+    transition: opacity 2s;
     &.off {
         opacity: 0;
     }
