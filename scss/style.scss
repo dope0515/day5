@@ -31,7 +31,21 @@ aside {
     font-size: 5vw;
     color: #fff;
     transition: 2s all;
+    position: relative;
     &.off {
         opacity: 0;
+    }
+    p {
+        position: relative;
+        top: -50px;
+        text-align: center;
+    }
+    .bar {
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 50%;
     }
 }

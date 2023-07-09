@@ -8,10 +8,13 @@ let count = 0;
 imgDOM.forEach((img)=> {
     img.onload = () => {
         count++;
-        console.log(count)
+        const percent = parseInt((count / 200) * 100);
+        mask.querySelector('p').innerHTML = percent + '%';
+        mask.querySelector('.bar').style.width = percent + '%';
         if(count === num){
             console.log('이미지소스 로딩완료');
             mask.classList.add('off');
+
             setTimeout(()=> {
                 mask.remove();
             },2000);

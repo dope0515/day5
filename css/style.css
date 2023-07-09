@@ -67,9 +67,23 @@ aside {
   font-size: 5vw;
   color: #fff;
   transition: 2s all;
+  position: relative;
 }
 aside.off {
   opacity: 0;
+}
+aside p {
+  position: relative;
+  top: -50px;
+  text-align: center;
+}
+aside .bar {
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
